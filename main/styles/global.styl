@@ -16,6 +16,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   color: grey-text;
   margin: 25px 50px;
+  margin: 0
   font-size: 16px;
 }
 
@@ -29,3 +30,33 @@ h3 {
   font-weight: 700;
 }
 
+.container {
+  padding-left: 60px;
+  padding-right: 60px
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* MAIN NAV STYLES */
+
+header {
+  border: 1px solid red;
+}
+
+header div {
+  height: 50px;
+}
+
+header .nav-logo {
+  float: left;
+}
+
+header .nav-account {
+  float: right;
+}
