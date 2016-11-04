@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import InvitePerson from './Invites.person';
 
 export default class InvitesNoResponse extends React.Component {
   constructor(props){
@@ -9,6 +10,7 @@ export default class InvitesNoResponse extends React.Component {
     return (
       <article>
         <h2>Invites No Response</h2>
+        <InvitePerson />
       </article>
     )
   }
