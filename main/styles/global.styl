@@ -16,7 +16,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   color: grey-text;
   margin: 25px 50px;
-  margin: 0
+  margin: 0;
   font-size: 16px;
 }
 
@@ -44,7 +44,6 @@ h3 {
 }
 
 /* MAIN NAV STYLES */
-
 header {
   border: 1px solid red;
 }
@@ -59,4 +58,30 @@ header .nav-logo {
 
 header .nav-account {
   float: right;
+}
+
+/* EVENT STYLES */
+article {
+  border: 1px solid green;
+}
+
+.event-area {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: #fff;
+  background: url('/assets/event-bg-default.png') no-repeat top center;
+  background-size: cover;
+  /*resize: vertical;
+  overflow: auto;*/
+}
+
+.event-area h2 {
+  margin: 0;
+  font-size: 40px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.event-pullquote .byline {
+  display: block;
+  font-size: 14px;
 }
