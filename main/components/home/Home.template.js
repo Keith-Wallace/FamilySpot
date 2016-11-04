@@ -1,7 +1,8 @@
 import React from 'react';
 import Nav from '../nav/Nav.main';
 import Event from '../event/Event';
-import Invites from '../invites/Invites';
+import Overview from '../overview/Overview.panel';
+
 export default class Home extends React.Component {
   constructor(props){
     super(props)
@@ -14,7 +15,7 @@ export default class Home extends React.Component {
       <div>
         <Nav />
         <Event />
-        <Invites />
+        <Overview />
         {/*
         <h3>Home!</h3>
         <p>Welcome to react-boilerplate, {this.state.name}  </p>
