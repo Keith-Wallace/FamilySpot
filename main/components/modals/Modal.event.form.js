@@ -1,19 +1,20 @@
 import React from 'react'
-// import Modal from 'boron/DropModal';
 
 export default class Example extends React.Component {
-  showModal() {
-    this.refs.modal.show();
+  constructor(props){
+    super(props)
+    this.state = {
+      'eventName': this.props.eventData.eventName,
+      'location': this.props.eventData.location,
+      'city': this.props.eventData.city,
+      'state': this.props.eventData.state,
+      'dateStart': this.props.eventData.dateStart,
+      'dateEnd': this.props.eventData.dateEnd,
+      'details': this.props.eventData.details,
+      'byline': this.props.eventData.byline
+    }
+    this.saveForm = this.saveForm.bind(this)
   }
-
-  hideModal() {
-    this.refs.modal.hide();
-  }
-
-  callback(event) {
-    console.log(event);
-  }
-
   componentDidMount() {
     // Get the modal
     var modal = document.getElementById('myModal');
@@ -42,24 +43,61 @@ export default class Example extends React.Component {
     }
   }
 
-  render() {
+  saveForm(event) {
+    // event.preventDefault();
+    // console.log('this.refs.eventName.value ===> ', this.refs.eventName.value);
+    this.props.updateEvent(this.refs.eventName.value);
+    var modal = document.getElementById('myModal');
+    modal.style.display = "none";
+  }
 
+  closeModal() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = "none";
+  }
+
+  render() {
     return (
-      <div>
+      <div className="modal-wrapper">
         <button id="myBtn">Open Modal</button>
         <div id="myModal" className="modal">
           <div className="modal-content">
             <div className="modal-header">
-              <span className="close">×</span>
-              <h2>Modal Header</h2>
+              <h3>Edit Event Info</h3>
+              <span className="close">&#10005;</span>
             </div>
-            <div className="modal-body">
-              <p>Some text in the Modal Body</p>
-              <p>Some other text...</p>
-            </div>
-            <div className="modal-footer">
-              <h3>Modal Footer</h3>
-            </div>
+            
+              <label>Event Name</label>
+              <input ref="eventName" defaultValue={this.state.eventName} />
+
+              <label>Location</label>
+              <input ref="eventLocation" defaultValue={this.state.location} />
+
+              <div className="form-col-2">
+                <div>
+                  <label>City</label>
+                  <input ref="eventCity" defaultValue={this.state.city} />
+                </div>
+
+                <div>
+                  <label>State</label>
+                  <input ref="eventState" defaultValue={this.state.state} />
+                </div>
+              </div>
+
+              <label>Date Range</label>
+              <input className="input-half" ref="eventDateStart" defaultValue={this.state.dateStart} />
+              to
+              <input className="input-half input-last" ref="eventDateend" defaultValue={this.state.dateEnd} />
+
+              <label>Description</label>
+              <textarea ref="eventDescription" defaultValue={this.state.details} />
+
+              <label>Signature</label>
+              <input ref="eventByline" defaultValue={this.state.byline} />
+
+              <button onClick={this.saveForm}>Save</button>
+              <button className="btn-cancel" onClick={this.closeModal}>Cancel</button>
           </div>
         </div>
       </div>

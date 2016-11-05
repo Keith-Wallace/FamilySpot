@@ -17,14 +17,10 @@ export default class Home extends React.Component {
         <Event
           data={this.props.routes[0].data.event}
         />
-        <Overview />
-        {/*
-        <h3>Home!</h3>
-        <p>Welcome to react-boilerplate, {this.state.name}  </p>
-        <p>What is your name?</p>
-        <input ref='userName' className='name' />
-        <button className='button' onClick={this.changeName}>Submit</button>
-      */}
+        <Overview
+          invitesData={this.props.routes[0].data.invite}
+          activityData={this.props.routes[0].data.activity}
+        />
       </div>
     )
   }

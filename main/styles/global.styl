@@ -3,6 +3,13 @@ error-red =       #D0021B
 grey-text =       #515151
 trueblue =        #1482BA
 
+/* COLOR STYLES */
+light-grey =  #CCCCCC
+grey =        #666666
+dark-grey =   #515151
+
+
+
 global-reset()
 
 *,
@@ -26,7 +33,7 @@ h1 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -37,11 +44,33 @@ h3 {
   margin-right: auto;
 }
 
-.container:after {
+.container:after,
+.form-col-2 {
   content: "";
   display: table;
   clear: both;
 }
+
+button {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  /*margin: 40px 20px 20px 0;*/
+  /*width: 100px;*/
+  font-size: 16px;
+  /*text-shadow: 1px 1px 2px #000;*/
+  box-shadow: 0 4px 2px -2px #636363;
+  background: #2396D9;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.btn-cancel {
+  color: #636363;
+  background: #f0f0f0;
+}
+
+
 
 /* MAIN NAV STYLES */
 header {
@@ -62,7 +91,7 @@ header .nav-account {
 
 /* EVENT STYLES */
 article {
-  border: 1px solid green;
+  /*border: 1px solid green;*/
 }
 
 .event-area {
@@ -79,6 +108,8 @@ article {
   margin: 0;
   font-size: 40px;
   text-shadow: 1px 1px 2px #000;
+  display: inline-block;
+  width: 75%;
 }
 
 .event-pullquote .byline {
@@ -93,12 +124,14 @@ article {
 
 .invites {
   float: left;
-  width: 48%
+  width: 50%;
+  padding-top: 20px;
 }
 
 .activities {
   float: right;
-  width: 48%
+  width: 35%;
+  padding-top: 20px;
 }
 
 /* INVITES STYLES */
@@ -110,27 +143,16 @@ article {
   width: 25%;
   margin-bottom: 20px;
 }
-
-/*
-.invite-headshot:nth-child(odd) {
-  margin-right: 10px;
-}
-
-.invite-headshot:nth-child(even) {
-  margin-left: 10px;
-}
 */
 
 
-/* ==================================================================
-    MODAL
-================================================================== */
+/* MODAL =================================================================== */
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 25px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -138,6 +160,7 @@ article {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    color: #636363;
 }
 
 /* Modal Content */
@@ -147,12 +170,15 @@ article {
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
+    padding: 20px 40px;
+    border-top: 4px solid #C55B9A;
+    font-size: 14px;
 }
 
 /* Add Animation */
@@ -168,7 +194,7 @@ article {
 
 /* The Close Button */
 .close {
-    color: white;
+    color: #636363;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -181,11 +207,7 @@ article {
     cursor: pointer;
 }
 
-.modal-header {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-}
+
 
 .modal-body {padding: 2px 16px;}
 
@@ -194,5 +216,149 @@ article {
     background-color: #5cb85c;
     color: white;
 }
+
+.modal-content h3 {
+  margin: 0;
+  display: inline-block;
+}
+
+.modal-header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #636363;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%
+  height: 32px;
+  border: 1px solid #e6e6e6;
+  display: inline-block;
+  font-size: 16px;
+  color: #636363;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.modal-content textarea {
+  height: 64px;
+}
+
+.modal-content button {
+  width: 100px;
+  margin: 20px 10px 10px 0px;
+}
+
+/*.modal-content button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin: 40px 20px 20px 0;
+  width: 100px;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 0 4px 2px -2px #636363;
+  color: #636363;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+button.btn-save {
+  background: #2c96d4;
+  color: #fff;
+}*/
+
+.form-col-2 {
+  width: 100%;
+}
+
+.form-col-2 div:first-child {
+  float: left;
+  width: 48%;
+  margin-right: 10px;
+}
+.form-col-2 div:last-child {
+  float: right;
+  width: 48%;
+}
+
+input.input-half {
+  width: 42%;
+  margin-right: 10px;
+}
+
+input.input-last {
+  margin-left: 10px;
+}
+
+.modal-wrapper {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.article-area h2,
+.article-area h3 {
+  color: #636363;
+  display: inline-block;
+}
+
+.article-area button {
+  margin-top: 14px;
+  float: right;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* INVITES ================================================================= */
+
+
+/* ACTIVITIES ============================================================== */
+.activity-detail {
+  background: #fff;
+  padding: 10px 20px;
+  box-shadow: 2px 4px 2px -2px #636363;
+  margin-bottom: 20px;
+}
+
+.activity-settings {
+  float: right;
+}
+
+.activity-detail .activity-settings {
+  cursor: pointer;
+}
+
+.activity-detail h3 {
+  margin: 10px 0;
+  color: #1B4E64;
+}
+
+.activity-detail .activity-date {
+  color: #961D65;
+}
+
+.activity-detail p {
+  font-size: 14px;
+  color: #636363;
+  margin: 5px 0;
+}
+
+use.svg-icon {
+  border:1px solid red;
+}
+
+
+
+
+
+
+
 
 

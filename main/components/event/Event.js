@@ -16,6 +16,18 @@ export default class Event extends React.Component {
       'byline': this.props.data[0].byline
     }
     // this.changeName = this.changeName.bind(this)
+    this.updateEvent = this.updateEvent.bind(this)
+  }
+
+  updateEvent(myVal) {
+    // console.log('-----> ', myVal)
+
+    // this.setState({recentContacts: contacts});
+
+    this.setState({'eventName': myVal});
+    // this.setState({
+    //   eventName: myVal
+    // });
   }
 
 
@@ -25,7 +37,11 @@ export default class Event extends React.Component {
     return (
       <article>
         <div className="container event-area">
-          <h2>{this.state.eventName}</h2> <Example />
+          <h2>{this.state.eventName}</h2>
+          <Example
+            eventData={this.props.data[0]}
+            updateEvent={this.updateEvent}
+          />
           <h3>{this.state.location}</h3>
           <span>{this.state.city}, {this.state.state}</span>
           <p>{this.state.dateStart} - {this.state.dateEnd}</p>

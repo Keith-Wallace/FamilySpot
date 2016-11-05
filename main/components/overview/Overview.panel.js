@@ -7,7 +7,7 @@ import Activities from './activities/Activities.panel';
 export default class Overview extends React.Component {
   constructor(props){
     super(props)
-    this.state = {name: 'Guest'}
+    // this.state = {name: 'Guest'}
   }
   render() {
     return (
@@ -19,7 +19,7 @@ export default class Overview extends React.Component {
             <InvitesNoResponse />
           </div>
           <div className="activities">
-            <Activities />
+            <Activities activityData={this.props.activityData} />
           </div>
         </div>
       </article>

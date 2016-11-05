@@ -3,15 +3,28 @@ import React from 'react';
 export default class Activity extends React.Component {
   constructor(props){
     super(props)
-    this.state = {name: 'Guest'}
+    this.state = {
+      "name": this.props.dataRow.name,
+      "event": {
+        "date": this.props.dataRow.event.date,
+        "time": this.props.dataRow.event.time
+      },
+      "description": this.props.dataRow.description
+    }
   }
   render() {
+    console.log('activity ===> ', this.props)
+    console.log('==========================')
     return (
       <article>
-        <div>[x]</div>
-        <h3>Activity Name</h3>
-        <div>July 4 at 9:00am</div>
-        <p>Saddle up and take part in an enjoyable family adventure. We offer trail rides for all levels of riders - beginner, intermediate, advanced.</p>
+        <div className="activity-detail">
+          <div className="activity-settings">
+            <img src="../../../assets/gear-icon.svg" width="18px" />
+          </div>
+          <h3>{this.state.name}</h3>
+          <div className="activity-date">{this.state.event.date} at {this.state.event.time}</div>
+          <p>{this.state.description}</p>
+        </div>
       </article>
     )
   }
