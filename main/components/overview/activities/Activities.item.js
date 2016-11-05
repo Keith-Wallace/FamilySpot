@@ -13,8 +13,6 @@ export default class Activity extends React.Component {
     }
   }
   render() {
-    console.log('activity ===> ', this.props)
-    console.log('==========================')
     return (
       <article>
         <div className="activity-detail">

@@ -8,10 +8,6 @@ export default class Activities extends React.Component {
   }
   render() {
     let keyCounter = 0;
-    this.props.activityData.map((singleActivity) =>
-      console.log('singleActivity==> ', singleActivity)
-    );
-
     return (
       <article>
       <div className="article-area">
