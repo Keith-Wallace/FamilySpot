@@ -1,4 +1,6 @@
 import React from 'react'
+import Example from '../modals/Modal.event.form';
+// import Modal from 'boron/DropModal';
 
 export default class Event extends React.Component {
   constructor(props){
@@ -15,16 +17,15 @@ export default class Event extends React.Component {
     }
     // this.changeName = this.changeName.bind(this)
   }
-  updateEvent() {
-    console.log('MODAL')
-  }
+
+
   // changeName() { this.setState({name: this.refs.userName.value}) }
   render() {
     // console.log('EVENT DATA: ', this.props)
     return (
       <article>
         <div className="container event-area">
-          <h2>{this.state.eventName}</h2> <button onClick={this.updateEvent}>Edit Info</button>
+          <h2>{this.state.eventName}</h2> <Example />
           <h3>{this.state.location}</h3>
           <span>{this.state.city}, {this.state.state}</span>
           <p>{this.state.dateStart} - {this.state.dateEnd}</p>
