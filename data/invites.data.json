@@ -1,5 +1,4 @@
-[
-  {
+[{
     "name": "First L.",
     "headshot": "headshot-placeholder.png",
     "status": {
@@ -8,8 +7,7 @@
       "noResponse": false
     },
     "guests": 1
-  },
-  {
+  }, {
     "name": "First L.",
     "headshot": "headshot-placeholder.png",
     "status": {
@@ -18,8 +16,7 @@
       "noResponse": false
     },
     "guests": 2
-  },
-  {
+  }, {
     "name": "First L.",
     "headshot": "headshot-placeholder.png",
     "status": {
@@ -28,8 +25,7 @@
       "noResponse": false
     },
     "guests": 3
-  },
-  {
+  }, {
     "name": "First L.",
     "headshot": "headshot-placeholder.png",
     "status": {
@@ -38,8 +34,7 @@
       "noResponse": false
     },
     "guests": 4
-  },
-  {
+  }, {
     "name": "First L.",
     "headshot": "headshot-placeholder.png",
     "status": {
@@ -48,8 +43,7 @@
       "noResponse": false
     },
     "guests": 0
-  },
-  {
+  }, {
     "name": "First L.",
     "headshot": "headshot-placeholder.png",
     "status": {
@@ -58,8 +52,7 @@
       "noResponse": false
     },
     "guests": 0
-  },
-  {
+  }, {
     "name": "First L.",
     "headshot": "headshot-placeholder.png",
     "status": {
@@ -68,8 +61,7 @@
       "noResponse": false
     },
     "guests": 0
-  },
-  {
+  }, {
     "name": "First L.",
     "headshot": "headshot-placeholder.png",
     "status": {
@@ -78,5 +70,4 @@
       "noResponse": true
     },
     "guests": 0
-  },
-]
+  }]

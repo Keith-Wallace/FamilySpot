@@ -5,6 +5,12 @@ module.exports = {
   devtool: config.get('NODE_ENV') ? 'inline-sourcemap' : null,
   entry: './app.js',
   module: {
+    preLoaders: [
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      }
+    ],
     loaders: [
       {
         test: /\.js$/, 
@@ -26,7 +32,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.json']
   },
   output: {
     filename: 'app.min.js'
