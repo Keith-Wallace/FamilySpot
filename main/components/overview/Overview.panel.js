@@ -27,9 +27,9 @@ export default class Overview extends React.Component {
     });
   }
   render() {
-    console.log('this.state.coming ==> ', this.state.coming);
-    console.log('this.state.notComing ==> ', this.state.notComing);
-    console.log('this.state.noResponse ==> ', this.state.noResponse);
+    // console.log('this.state.coming ==> ', this.state.coming);
+    // console.log('this.state.notComing ==> ', this.state.notComing);
+    // console.log('this.state.noResponse ==> ', this.state.noResponse);
     return (
       <article>
         <div className="container overview-area">
@@ -37,6 +37,14 @@ export default class Overview extends React.Component {
             <InvitesComing
               rowData={this.state.coming}
               total={this.state.coming.length}
+            />
+            <InvitesNotComing
+              rowData={this.state.notComing}
+              total={this.state.notComing.length}
+            />
+            <InvitesNoResponse
+              rowData={this.state.noResponse}
+              total={this.state.noResponse.length}
             />
           </div>
           <div className="activities">

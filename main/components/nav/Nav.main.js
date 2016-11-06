@@ -11,18 +11,20 @@ export default class Home extends React.Component {
     return (
       <div>
         <header>
-          <div className="container">
-            <div className="nav-logo">
-              <a href="#">
-                <img src="../../../assets/logo.png" />
-              </a>
-            </div>
-            <div className="nav-account">
-              <a href="#">
-                <img src="../../../assets/avatar.png" />
-                {this.state.name}
-              </a>
-            </div>
+          <div className="container nav">
+            <ul>
+              <li className="nav-logo">
+                <a href="#">
+                  <img src="../../../assets/logo.png" />
+                </a>
+              </li>
+              <li className="nav-account">
+                <a href="#">
+                  <img src="../../../assets/avatar.png" />
+                  {this.state.name}
+                </a>
+              </li>
+            </ul>
           </div>
         </header>
       </div>

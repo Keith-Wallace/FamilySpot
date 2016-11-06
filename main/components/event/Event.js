@@ -1,5 +1,5 @@
 import React from 'react'
-import Example from '../modals/Modal.event.form';
+import FormModal from '../modals/Modal.event.form';
 // import Modal from 'boron/DropModal';
 
 export default class Event extends React.Component {
@@ -38,7 +38,7 @@ export default class Event extends React.Component {
       <article>
         <div className="container event-area">
           <h2>{this.state.eventName}</h2>
-          <Example
+          <FormModal
             eventData={this.props.data[0]}
             updateEvent={this.updateEvent}
           />

@@ -59,7 +59,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <div className="modal-wrapper">
-        <button id="myBtn">Open Modal</button>
+        <button id="myBtn">Edit Info</button>
         <div id="myModal" className="modal">
           <div className="modal-content">
             <div className="modal-header">

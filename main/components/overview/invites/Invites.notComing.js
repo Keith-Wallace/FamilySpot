@@ -7,10 +7,24 @@ export default class InvitesNotComing extends React.Component {
     this.state = {name: 'Guest'}
   }
   render() {
+    let keyCounter = 0;
     return (
       <article>
-        <h2>Invites Not Coming</h2>
-        <InvitePerson />
+        <div>
+          <h2>Not Coming ({this.props.total})</h2>
+        </div>
+
+        <ul className="inviteList">
+          {
+            this.props.rowData.map((item) =>
+              <InvitePerson
+                key={keyCounter++}
+                itemData={item}
+                showGuests="N"
+              />
+            )
+          }
+          </ul>
       </article>
     )
   }

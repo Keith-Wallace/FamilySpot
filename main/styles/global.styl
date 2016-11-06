@@ -4,6 +4,11 @@ grey-text =       #515151
 trueblue =        #1482BA
 
 /* COLOR STYLES */
+/* TEXT */
+
+/* BACKGROUND */
+
+grey-background = #f0f0f0
 light-grey =  #CCCCCC
 grey =        #666666
 dark-grey =   #515151
@@ -21,10 +26,12 @@ global-reset()
 body {
   height: 100%;
   font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
   color: grey-text;
   margin: 25px 50px;
   margin: 0;
   font-size: 16px;
+  background: grey-background;
 }
 
 h1 {
@@ -37,15 +44,36 @@ h3 {
   font-weight: 700;
 }
 
-.container {
-  padding-left: 60px;
-  padding-right: 60px
+/*.container {
+  padding-left: 50px;
+  padding-right: 50px
   margin-left: auto;
   margin-right: auto;
+  width: 1024px;
+}*/
+
+@media only screen and (min-width: 600px) {
+  /* TABLETS */
+  .container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* DESKTOP */
+  .container {
+    padding-left: 50px;
+    padding-right: 50px
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+  }
 }
 
 .container:after,
-.form-col-2 {
+.form-col-2:after {
   content: "";
   display: table;
   clear: both;
@@ -67,41 +95,78 @@ button {
 
 button.btn-cancel {
   color: #636363;
-  background: #f0f0f0;
+  background: grey-background;
 }
 
+/* MAIN WRAPPER ================================================== */
+#app {
+  /*width: 1024px;*/
+  /*border: 1px solid red;*/
+  margin-left: auto;
+  margin-right: auto;
+}
 
-
-/* MAIN NAV STYLES */
+/* TOP NAV ======================================================= */
 header {
-  border: 1px solid red;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  clear: both;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 2px -2px grey;
+  -webkit-backface-visibility: hidden;
 }
 
-header div {
-  height: 50px;
+header .nav {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-header .nav-logo {
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav li {
   float: left;
 }
 
-header .nav-account {
+.nav li:last-child {
   float: right;
 }
 
-/* EVENT STYLES */
-article {
-  /*border: 1px solid green;*/
+.nav li a {
+  display: block;
+  color: dark-grey;
+  text-align: center;
+  /*padding: 14px 16px;*/
+  text-decoration: none;
 }
 
+.nav li img,
+.nav li a {
+  /*border: 1px solid red;*/
+  vertical-align: bottom;
+}
+
+.nav li a span {
+  line-height: 41px;
+}
+
+/* EVENT AREA ==================================================== */
 .event-area {
+  margin-top: 72px;
   padding-top: 80px;
   padding-bottom: 80px;
   color: #fff;
   background: url('/assets/event-bg-default.png') no-repeat top center;
   background-size: cover;
-  /*resize: vertical;
-  overflow: auto;*/
 }
 
 .event-area h2 {
@@ -119,13 +184,14 @@ article {
 
 /* OVERVIEW STYLES */
 .overview-area {
-  background: #f0f0f0;
+  background: grey-background;
 }
 
 .invites {
   float: left;
   width: 50%;
   padding-top: 20px;
+  /*border: 1px solid green;*/
 }
 
 .activities {
@@ -134,16 +200,65 @@ article {
   padding-top: 20px;
 }
 
-/* INVITES STYLES */
-.invites {
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+.INVITE-BOX {
+  display: inline-block;
+  /*border: 1px solid red;*/
+  color: dark-grey;
 }
 
-.invite-headshot {
-  display: inline-block;
-  width: 25%;
-  margin-bottom: 20px;
+ul.inviteList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-*/
+
+ul.inviteList:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.inviteList li {
+  float: left;
+  /*margin: 10px 0;*/
+  margin: 0;
+  margin-bottom: 20px;
+  width: 25%;
+  /*border: 1px solid red;*/
+}
+
+
+.INVITE-HEADSHOT {
+  width: 100px;
+  height: 100px;
+  /*background: grey;*/
+  box-shadow: 4px 4px 2px -2px light-grey;
+}
+
+.INVITE-HEADSHOT img {
+  width: 100px;
+  height: 100px;
+}
+
+.INVITE-CAPTION {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.INVITE-CAPTION span {
+  display: block;
+}
+.INVITE-CAPTION span:last-child {
+  color: light-grey;
+}
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
 
 
 /* MODAL =================================================================== */
@@ -256,25 +371,6 @@ article {
   margin: 20px 10px 10px 0px;
 }
 
-/*.modal-content button {
-  border: none;
-  border-radius: 6px;
-  padding: 10px 20px;
-  margin: 40px 20px 20px 0;
-  width: 100px;
-  font-size: 16px;
-  text-shadow: 1px 1px 2px #000;
-  box-shadow: 0 4px 2px -2px #636363;
-  color: #636363;
-  background: #f0f0f0;
-  cursor: pointer;
-}
-
-button.btn-save {
-  background: #2c96d4;
-  color: #fff;
-}*/
-
 .form-col-2 {
   width: 100%;
 }
@@ -317,6 +413,10 @@ input.input-last {
 }
 
 /* INVITES ================================================================= */
+.invites article {
+  /*border: 1px solid green;*/
+}
+
 .invites h2,
 .invites h3 {
   color: dark-grey;
@@ -326,6 +426,34 @@ input.input-last {
 .invites button {
   float: right;
   margin-top: 14px;
+  margin-right: 12px;
+}
+
+.invites .invite-box {
+  /*display: inline-block;*/
+  text-align: center
+  /*border: 1px solid red;*/
+}
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /*-webkit-justify-content: center;
+  justify-content: center;*/
+  /*width: 400px;
+  height: 250px;*/
+  background-color: lightgrey;
+}
+
+.flex-item {
+  background-color: cornflowerblue;
+  margin: 5px 5px;
+  /*width: 25%;*/
+  /*width: 100px;
+  height: 100px;
+  margin: 10px;*/
 }
 
 
@@ -364,12 +492,3 @@ input.input-last {
 use.svg-icon {
   border:1px solid red;
 }
-
-
-
-
-
-
-
-
-

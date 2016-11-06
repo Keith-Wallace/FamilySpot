@@ -10,16 +10,22 @@ export default class InvitesComing extends React.Component {
     let keyCounter = 0;
     return (
       <article>
-        <h2>Who's Coming? ({this.props.total})</h2>
-        <button>Invite More People</button>
-        {
-          this.props.rowData.map((item) =>
-            <InvitePerson
-              key={keyCounter++}
-              itemData={item}
-            />
-          )
-        }
+        <div>
+          <h2>Who's Coming? ({this.props.total})</h2>
+          <button>Invite More People</button>
+        </div>
+
+        <ul className="inviteList">
+          {
+            this.props.rowData.map((item) =>
+              <InvitePerson
+                key={keyCounter++}
+                itemData={item}
+                showGuests="Y"
+              />
+            )
+          }
+          </ul>
       </article>
     )
   }

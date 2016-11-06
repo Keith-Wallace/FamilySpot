@@ -14,13 +14,15 @@ export default class Home extends React.Component {
     return (
       <div>
         <Nav />
-        <Event
-          data={this.props.routes[0].data.event}
-        />
-        <Overview
-          invitesData={this.props.routes[0].data.invite}
-          activityData={this.props.routes[0].data.activity}
-        />
+        <div className="">
+          <Event
+            data={this.props.routes[0].data.event}
+          />
+          <Overview
+            invitesData={this.props.routes[0].data.invite}
+            activityData={this.props.routes[0].data.activity}
+          />
+        </div>
       </div>
     )
   }
