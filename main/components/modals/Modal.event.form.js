@@ -45,8 +45,8 @@ export default class Example extends React.Component {
 
   saveForm(event) {
     // event.preventDefault();
-    // console.log('this.refs.eventName.value ===> ', this.refs.eventName.value);
-    this.props.updateEvent(this.refs.eventName.value);
+    // console.log(this.refs)
+    this.props.updateEvent(this.refs);
     var modal = document.getElementById('myModal');
     modal.style.display = "none";
   }
@@ -88,7 +88,7 @@ export default class Example extends React.Component {
               <label>Date Range</label>
               <input className="input-half" ref="eventDateStart" defaultValue={this.state.dateStart} />
               to
-              <input className="input-half input-last" ref="eventDateend" defaultValue={this.state.dateEnd} />
+              <input className="input-half input-last" ref="eventDateEnd" defaultValue={this.state.dateEnd} />
 
               <label>Description</label>
               <textarea ref="eventDescription" defaultValue={this.state.details} />

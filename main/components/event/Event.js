@@ -19,15 +19,19 @@ export default class Event extends React.Component {
     this.updateEvent = this.updateEvent.bind(this)
   }
 
-  updateEvent(myVal) {
-    // console.log('-----> ', myVal)
+  updateEvent(data) {
+    // console.log('=====> ', data.eventName.value)
 
-    // this.setState({recentContacts: contacts});
-
-    this.setState({'eventName': myVal});
-    // this.setState({
-    //   eventName: myVal
-    // });
+    this.setState({
+        'eventName': data.eventName.value,
+        'location': data.eventLocation.value,
+        'city': data.eventCity.value,
+        'state': data.eventState.value,
+        'dateStart': data.eventDateStart.value,
+        'dateEnd': data.eventDateEnd.value,
+        'details': data.eventDescription.value,
+        'byline': data.eventByline.value
+      })
   }
 
 
