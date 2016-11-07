@@ -8,10 +8,12 @@
     "npm": "3.9.5"
   },
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "node ./server.js",
+    "start2": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "./node_modules/.bin/karma start  --single-run --browsers Chrome",
     "test-watch": "./node_modules/.bin/karma start --browsers Chrome",
-    "dev": "webpack-dev-server --content-base ./ --inline --hot --no-info --port 3001"
+    "dev": "webpack-dev-server --content-base ./ --inline --hot --no-info --port 3001",
+    "webpack": "webpack"
   },
   "author": "Maneesh Anand maneesh.work@gmail.com",
   "license": "ISC",
