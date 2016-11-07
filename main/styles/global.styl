@@ -3,6 +3,36 @@ error-red =       #D0021B
 grey-text =       #515151
 trueblue =        #1482BA
 
+/* COLOR TEXT */
+text-light-grey =  #CCCCCC
+text-grey =        #666666
+text-dark-grey =   #515151
+
+/* BACKGROUND AND SHADING */
+bg-white= #ffffff
+bg-grey = #f0f0f0
+bg-purple = #6C356A
+shadow-grey = #666666
+shadow-light-grey = #CCCCCC
+
+/* MARGINS AND PADDING */
+margin-body =   50px
+padding-body =  50px
+
+/* FONT SIZES */
+font-body =     16px;
+
+/*H1*/
+font-xxlarge = (font-body * 3)      /*48px*/
+/*H2*/
+font-xlarge = (font-body * 2)       /*32px*/
+/*H3*/
+font-large = (font-body * 1.5)      /*24px*/
+
+font-small = (font-body - 4)        /*12px*/
+
+
+
 global-reset()
 
 *,
@@ -14,18 +44,588 @@ global-reset()
 body {
   height: 100%;
   font-family: Helvetica, Arial, sans-serif;
-  color: grey-text;
-  margin: 25px 50px;
-  font-size: 16px;
+  font-weight: 100;
+  color: text-grey;
+  margin: 0;
+  font-size: font-body;
+  background: bg-grey;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: font-xxlarge;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: font-xlarge;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: font-large;
   font-weight: 700;
 }
+
+/*.container {
+  padding-left: 50px;
+  padding-right: 50px
+  margin-left: auto;
+  margin-right: auto;
+  width: 1024px;
+}*/
+
+.container:after,
+.form-col-2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  box-shadow: 0 4px 2px -2px #636363;
+  background: #2396D9;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.btn-cancel {
+  color: text-grey;
+  background: bg-grey;
+}
+
+/* PAGE WRAPPER //////////////////////////////////////////////////////////// */
+#app {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TOP NAV ///////////////////////////////////////////////////////////////// */
+header {
+  width: 100%;
+  background: bg-white;
+  position: fixed;
+  clear: both;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 2px -2px shadow-grey;
+  -webkit-backface-visibility: hidden;
+}
+
+header .nav {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li:last-child {
+  float: right;
+}
+
+.nav li a {
+  display: block;
+  color: text-dark-grey;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav li img,
+.nav li a {
+  vertical-align: bottom;
+}
+
+.nav li a span {
+  line-height: 41px;
+}
+
+/* EVENT AREA ////////////////////////////////////////////////////////////// */
+.event-area {
+  margin-top: 72px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: #fff;
+  background: url('/assets/event-bg-default.png') no-repeat top center;
+  background-size: cover;
+}
+
+.event-area h2 {
+  font-size: font-xxlarge;
+  margin: 0 0 20px 0;
+  text-shadow: 1px 1px 2px #000;
+  display: inline-block;
+  width: 88%;
+}
+
+.event-area button {
+  margin-top: 8px;
+}
+
+.event-area h3 {
+  margin: 0;
+  font-size: font-body;
+}
+
+.event-pullquote .byline {
+  display: block;
+  font-size: font-small;
+}
+
+/* MODAL /////////////////////////////////////////////////////////////////// */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 25px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  color: #636363;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+  padding: 20px 40px;
+  border-top: 4px solid #C55B9A;
+  font-size: 14px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.close {
+  color: #636363;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-content h3 {
+  margin: 0;
+  display: inline-block;
+}
+
+.modal-header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #636363;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%
+  height: 32px;
+  border: 1px solid #e6e6e6;
+  display: inline-block;
+  font-size: 16px;
+  color: #636363;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.modal-content textarea {
+  height: 64px;
+}
+
+.modal-content button {
+  width: 100px;
+  margin: 20px 10px 10px 0px;
+}
+
+.form-col-2 {
+  width: 100%;
+}
+
+.form-col-2 div:first-child {
+  float: left;
+  width: 48%;
+  margin-right: 10px;
+}
+.form-col-2 div:last-child {
+  float: right;
+  width: 48%;
+}
+
+input.input-half {
+  width: 42%;
+  margin-right: 10px;
+}
+
+input.input-last {
+  margin-left: 10px;
+}
+
+.modal-wrapper {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* OVERVIEW //////////////////////////////////////////////////////////////// */
+.overview-area {
+  background: grey-background;
+}
+
+.overview-nav {
+  display: none;
+  background: bg-purple;
+  color: #fff;
+  border-top: 1px solid text-light-grey;
+  border-bottom: 1px solid text-light-grey;
+}
+
+.overview-nav-area {
+  display: none;
+  text-align: center;
+  height: 40px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.overview-nav-area ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  /* FLEX IT */
+  /*overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;*/
+}
+
+.overview-nav-area ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.overview-nav-area li {
+  float: left;
+  margin: 0;
+  padding: 14px;
+  padding: 10px 14px 18px 14px;
+  width: 33%;
+  border-right: 1px solid text-light-grey;
+  cursor: pointer;
+}
+
+.overview-nav-area img {
+  position: relative;
+  top: 10px;
+  right: 32px;
+}
+
+.selected-area {
+  width: 100%;
+}
+
+/*.overview-nav-area li:last-child {
+  border-right: none;
+}*/
+
+
+/* INVITES ///////////////////////////////////////////////////////////////// */
+.invites {
+  float: left;
+  width: 50%;
+  padding-top: 20px;
+}
+
+.invites h2 {
+  font-size: font-large;
+  color: text-dark-grey;
+  display: inline-block;
+}
+
+.invites button {
+  float: right;
+  margin-top: 14px;
+  margin-right: 12px;
+}
+
+.INVITE-BOX {
+  display: inline-block;
+  color: text-dark-grey;
+}
+
+ul.inviteList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.inviteList:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.inviteList li {
+  float: left;
+  margin: 0;
+  margin-bottom: 20px;
+  width: 25%;
+}
+
+.INVITE-HEADSHOT {
+  width: 100px;
+  height: 100px;
+  box-shadow: 4px 4px 2px -2px shadow-light-grey;
+}
+
+.INVITE-HEADSHOT img {
+  width: 100%;
+  height: 100%;
+}
+
+.INVITE-CAPTION {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.INVITE-CAPTION span {
+  display: block;
+}
+.INVITE-CAPTION span:last-child {
+  color: text-light-grey;
+}
+
+/* ACTIVITIES ////////////////////////////////////////////////////////////// */
+.activities {
+  float: right;
+  width: 35%;
+  padding-top: 20px;
+}
+
+.activities h2 {
+  font-size: font-large;
+  display: inline-block;
+}
+
+.activity-area h2,
+.activity-area h3 {
+  color: text-dark-grey;
+  display: inline-block;
+}
+
+.activity-area button {
+  margin-top: 14px;
+  float: right;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.activity-detail {
+  background: #fff;
+  padding: 10px 20px;
+  box-shadow: 2px 4px 2px -2px #636363;
+  margin-bottom: 20px;
+}
+
+.activity-settings {
+  float: right;
+}
+
+.activity-detail .activity-settings {
+  cursor: pointer;
+}
+
+.activity-detail h3 {
+  margin: 10px 0;
+  color: #1B4E64;
+}
+
+.activity-detail .activity-date {
+  color: #961D65;
+}
+
+.activity-detail p {
+  font-size: 14px;
+  color: #636363;
+  margin: 5px 0;
+}
+
+use.svg-icon {
+  border: 1px solid red;
+}
+
+
+/* MEDIA STYLES //////////////////////////////////////////////////////////// */
+@media only screen and (min-width: 320px) {
+  /* MOBILE AND TABLETS */
+  .container {
+    font-size: font-small;
+    width: 100%;
+    padding-left: (margin-body / 2);
+    padding-right: (margin-body / 2);
+  }
+
+  .nav li a {
+    text-align: left;
+  }
+
+  .nav-logo img {
+    width: 75%;
+  }
+
+  .event-area {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .event-area h2 {
+    font-size: font-large;
+    width: 60%;
+  }
+
+  .modal-wrapper {
+    float: right;
+  }
+
+  .modal-content {
+    width: 85%;
+    padding: 10px 20px;
+  }
+
+  .invites,
+  .activities {
+    display: none;
+    width: 100%;
+  }
+
+  .invites h2,
+  .activities h2 {
+    font-size: (font-large - 4);
+  }
+
+  .invites button,
+  .activities button {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .INVITE-HEADSHOT {
+    width: 85px;
+    height: 85px;
+  }
+
+  /*.INVITE-HEADSHOT img {
+    width: 80%;
+    height: 80%;
+  }*/
+
+  button {
+    font-size: font-small;
+  }
+
+  .overview-nav {
+    display: block;
+  }
+
+  .overview-nav-area {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .show-tab {
+    display: block;
+    width: 100%;
+  }
+
+  .icon-tri-down {
+    background-image: url(/assets/icon-triangle-down-white.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 75%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* DESKTOP */
+  .container {
+    font-size: font-body;
+    padding-left: margin-body;
+    padding-right: margin-body;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+  }
+
+  .invites,
+  .activities {
+    display: block;
+    width: 50%;
+  }
+
+  .overview-nav {
+    display: none;
+  }
+}
+
+
+
+
+
+
 

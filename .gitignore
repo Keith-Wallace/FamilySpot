@@ -1,3 +1,6 @@
 node_modules
 *.log
 app.min.js
+
+# Assests Not Required
+ep front end code test.sketch

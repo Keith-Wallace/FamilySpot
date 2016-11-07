@@ -1,0 +1,50 @@
+[{
+  "name": "Horseback Ride",
+  "event": {
+    "date": "July 4",
+    "time": "9:00am"
+  },
+  "description": "Saddle up and take part in an enjoyable family adventure. We offer trail rides for all levels of riders - beginner, intermediate, advanced."
+}, {
+  "name": "Family Portrait",
+  "event": {
+    "date": "July 7",
+    "time": "6:00pm"
+  },
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris justo mauris, pulvinar ut est dictum, convallis tincidunt massa."
+}, {
+  "name": "Bonfire Barbecue",
+  "event": {
+    "date": "July 8",
+    "time": "8:00pm"
+  },
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris justo mauris, pulvinar ut est dictum, convallis tincidunt massa."
+}, {
+  "name": "White Water Rafting",
+  "event": {
+    "date": "July 5",
+    "time": "7:00am"
+  },
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris justo mauris, pulvinar ut est dictum, convallis tincidunt massa."
+}, {
+  "name": "Rocky Mountain Hike",
+  "event": {
+    "date": "July 5",
+    "time": "7:00am"
+  },
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris justo mauris, pulvinar ut est dictum, convallis tincidunt massa."
+}, {
+  "name": "Pheasant Hunt",
+  "event": {
+    "date": "July 5",
+    "time": "7:00am"
+  },
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris justo mauris, pulvinar ut est dictum, convallis tincidunt massa."
+}, {
+  "name": "Steak Dinner",
+  "event": {
+    "date": "July 5",
+    "time": "6:30pm"
+  },
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris justo mauris, pulvinar ut est dictum, convallis tincidunt massa."
+}]

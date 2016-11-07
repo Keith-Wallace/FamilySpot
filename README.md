@@ -10,3 +10,6 @@ This frontend web application is a fictitious Family Reunion App. It's purpose i
 ## Additional Features
 - Using Everplan's [React Boilerplate](https://github.com/everplans/react-boilerplate).
 - Useing frontend integration tests (mocha, jasmine, etc.). Also provided in Everplan's React Boilerplate
+
+## Tech and Libraries
+- [W3Schools](http://www.w3schools.com/howto/howto_css_modals.asp) How To: CSS/JS Modal
