@@ -4,7 +4,11 @@
   "description": "React-flux boilerplate",
   "main": "app.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "webpack-dev-server --content-base ./ --inline --hot --no-info --port 3001",
+=======
+    "start": "node ./server.js",
+>>>>>>> dev
     "test": "./node_modules/.bin/karma start  --single-run --browsers Chrome",
     "test-watch": "./node_modules/.bin/karma start --browsers Chrome",
     "dev": "webpack-dev-server --content-base ./ --inline --hot --no-info --port 3001"
@@ -24,6 +28,7 @@
     "babel-preset-stage-1": "^6.5.0",
     "config": "^1.14.0",
     "css-loader": "^0.23.1",
+    "express": "^4.14.0",
     "flux": "^2.1.1",
     "fluxxed_up": "git+https://github.com/everplans/fluxxed_up#dev",
     "history": "^2.0.0",
