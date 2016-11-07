@@ -35,6 +35,8 @@ module.exports = {
     extensions: ['', '.js', '.json']
   },
   output: {
+    path: __dirname,
+    publicPath: '/',
     filename: 'app.min.js'
   },
   plugins: config.get('NODE_ENV') ? [] : [
