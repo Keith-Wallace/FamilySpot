@@ -26,14 +26,13 @@ export default class Overview extends React.Component {
       }
     });
   }
+
   render() {
-    // console.log('this.state.coming ==> ', this.state.coming);
-    // console.log('this.state.notComing ==> ', this.state.notComing);
-    // console.log('this.state.noResponse ==> ', this.state.noResponse);
+    console.log(this.props.activityData)
     return (
       <article>
         <div className="container overview-area">
-          <div className="invites">
+          <div className="invites show-tab" id="nav-attendees">
             <InvitesComing
               rowData={this.state.coming}
               total={this.state.coming.length}
@@ -47,7 +46,7 @@ export default class Overview extends React.Component {
               total={this.state.noResponse.length}
             />
           </div>
-          <div className="activities">
+          <div className="activities" id="nav-activities">
             <Activities activityData={this.props.activityData} />
           </div>
         </div>

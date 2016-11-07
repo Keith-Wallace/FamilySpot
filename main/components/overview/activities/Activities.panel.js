@@ -10,18 +10,18 @@ export default class Activities extends React.Component {
     let keyCounter = 0;
     return (
       <article>
-      <div className="article-area">
-        <h2>Activities</h2>
-        <button>Add</button>
-        {
-          this.props.activityData.map((singleActivity) =>
-            <Activity
-              key={keyCounter++}
-              dataRow={singleActivity}
-            />
-          )
-        }
-      </div>
+        <div className="activity-area">
+          <h2>Activities</h2>
+          <button>Add</button>
+          {
+            this.props.activityData.map((singleActivity) =>
+              <Activity
+                key={keyCounter++}
+                dataRow={singleActivity}
+              />
+            )
+          }
+        </div>
       </article>
     )
   }

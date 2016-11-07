@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from '../nav/Nav.main';
 import Event from '../event/Event';
+import NavOverview from '../nav/Nav.overview';
 import Overview from '../overview/Overview.panel';
 
 export default class Home extends React.Component {
@@ -17,6 +18,9 @@ export default class Home extends React.Component {
         <div className="">
           <Event
             data={this.props.routes[0].data.event}
+          />
+          <NavOverview
+            activityCount={this.props.routes[0].data.activity.length}
           />
           <Overview
             invitesData={this.props.routes[0].data.invite}

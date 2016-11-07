@@ -34,10 +34,8 @@ export default class Event extends React.Component {
       })
   }
 
-
   // changeName() { this.setState({name: this.refs.userName.value}) }
   render() {
-    // console.log('EVENT DATA: ', this.props)
     return (
       <article>
         <div className="container event-area">

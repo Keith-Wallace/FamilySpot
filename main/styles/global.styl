@@ -3,15 +3,33 @@ error-red =       #D0021B
 grey-text =       #515151
 trueblue =        #1482BA
 
-/* COLOR STYLES */
-/* TEXT */
+/* COLOR TEXT */
+text-light-grey =  #CCCCCC
+text-grey =        #666666
+text-dark-grey =   #515151
 
-/* BACKGROUND */
+/* BACKGROUND AND SHADING */
+bg-white= #ffffff
+bg-grey = #f0f0f0
+bg-purple = #6C356A
+shadow-grey = #666666
+shadow-light-grey = #CCCCCC
 
-grey-background = #f0f0f0
-light-grey =  #CCCCCC
-grey =        #666666
-dark-grey =   #515151
+/* MARGINS AND PADDING */
+margin-body =   50px
+padding-body =  50px
+
+/* FONT SIZES */
+font-body =     16px;
+
+/*H1*/
+font-xxlarge = (font-body * 3)      /*48px*/
+/*H2*/
+font-xlarge = (font-body * 2)       /*32px*/
+/*H3*/
+font-large = (font-body * 1.5)      /*24px*/
+
+font-small = (font-body - 4)        /*12px*/
 
 
 
@@ -27,20 +45,24 @@ body {
   height: 100%;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 100;
-  color: grey-text;
-  margin: 25px 50px;
+  color: text-grey;
   margin: 0;
-  font-size: 16px;
-  background: grey-background;
+  font-size: font-body;
+  background: bg-grey;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: font-xxlarge;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: font-xlarge;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: font-large;
   font-weight: 700;
 }
 
@@ -51,26 +73,6 @@ h3 {
   margin-right: auto;
   width: 1024px;
 }*/
-
-@media only screen and (min-width: 600px) {
-  /* TABLETS */
-  .container {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  /* DESKTOP */
-  .container {
-    padding-left: 50px;
-    padding-right: 50px
-    margin-left: auto;
-    margin-right: auto;
-    width: 1024px;
-  }
-}
 
 .container:after,
 .form-col-2:after {
@@ -83,10 +85,7 @@ button {
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
-  /*margin: 40px 20px 20px 0;*/
-  /*width: 100px;*/
   font-size: 16px;
-  /*text-shadow: 1px 1px 2px #000;*/
   box-shadow: 0 4px 2px -2px #636363;
   background: #2396D9;
   color: #fff;
@@ -94,27 +93,25 @@ button {
 }
 
 button.btn-cancel {
-  color: #636363;
-  background: grey-background;
+  color: text-grey;
+  background: bg-grey;
 }
 
-/* MAIN WRAPPER ================================================== */
+/* PAGE WRAPPER //////////////////////////////////////////////////////////// */
 #app {
-  /*width: 1024px;*/
-  /*border: 1px solid red;*/
   margin-left: auto;
   margin-right: auto;
 }
 
-/* TOP NAV ======================================================= */
+/* TOP NAV ///////////////////////////////////////////////////////////////// */
 header {
   width: 100%;
-  background: #fff;
+  background: bg-white;
   position: fixed;
   clear: both;
   top: 0;
   width: 100%;
-  box-shadow: 0 4px 2px -2px grey;
+  box-shadow: 0 4px 2px -2px shadow-grey;
   -webkit-backface-visibility: hidden;
 }
 
@@ -143,15 +140,13 @@ header .nav {
 
 .nav li a {
   display: block;
-  color: dark-grey;
+  color: text-dark-grey;
   text-align: center;
-  /*padding: 14px 16px;*/
   text-decoration: none;
 }
 
 .nav li img,
 .nav li a {
-  /*border: 1px solid red;*/
   vertical-align: bottom;
 }
 
@@ -159,7 +154,7 @@ header .nav {
   line-height: 41px;
 }
 
-/* EVENT AREA ==================================================== */
+/* EVENT AREA ////////////////////////////////////////////////////////////// */
 .event-area {
   margin-top: 72px;
   padding-top: 80px;
@@ -170,166 +165,93 @@ header .nav {
 }
 
 .event-area h2 {
-  margin: 0;
-  font-size: 40px;
+  font-size: font-xxlarge;
+  margin: 0 0 20px 0;
   text-shadow: 1px 1px 2px #000;
   display: inline-block;
-  width: 75%;
+  width: 88%;
+}
+
+.event-area button {
+  margin-top: 8px;
+}
+
+.event-area h3 {
+  margin: 0;
+  font-size: font-body;
 }
 
 .event-pullquote .byline {
   display: block;
-  font-size: 14px;
+  font-size: font-small;
 }
 
-/* OVERVIEW STYLES */
-.overview-area {
-  background: grey-background;
-}
-
-.invites {
-  float: left;
-  width: 50%;
-  padding-top: 20px;
-  /*border: 1px solid green;*/
-}
-
-.activities {
-  float: right;
-  width: 35%;
-  padding-top: 20px;
-}
-
-/* ////////////////////////////////////////////////////////////////////////////////// */
-
-.INVITE-BOX {
-  display: inline-block;
-  /*border: 1px solid red;*/
-  color: dark-grey;
-}
-
-ul.inviteList {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-ul.inviteList:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.inviteList li {
-  float: left;
-  /*margin: 10px 0;*/
-  margin: 0;
-  margin-bottom: 20px;
-  width: 25%;
-  /*border: 1px solid red;*/
-}
-
-
-.INVITE-HEADSHOT {
-  width: 100px;
-  height: 100px;
-  /*background: grey;*/
-  box-shadow: 4px 4px 2px -2px light-grey;
-}
-
-.INVITE-HEADSHOT img {
-  width: 100px;
-  height: 100px;
-}
-
-.INVITE-CAPTION {
-  font-size: 13px;
-  margin-top: 5px;
-}
-
-.INVITE-CAPTION span {
-  display: block;
-}
-.INVITE-CAPTION span:last-child {
-  color: light-grey;
-}
-/* ////////////////////////////////////////////////////////////////////////////////// */
-
-
-
-
-
-
-
-/* MODAL =================================================================== */
-/* The Modal (background) */
+/* MODAL /////////////////////////////////////////////////////////////////// */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 25px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    color: #636363;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 25px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  color: #636363;
 }
 
-/* Modal Content */
 .modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-    padding: 20px 40px;
-    border-top: 4px solid #C55B9A;
-    font-size: 14px;
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+  padding: 20px 40px;
+  border-top: 4px solid #C55B9A;
+  font-size: 14px;
 }
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
 }
 
 @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
 }
 
-/* The Close Button */
 .close {
-    color: #636363;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #636363;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-
-
-.modal-body {padding: 2px 16px;}
+.modal-body {
+  padding: 2px 16px;
+}
 
 .modal-footer {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
 }
 
 .modal-content h3 {
@@ -399,27 +321,79 @@ input.input-last {
   vertical-align: top;
 }
 
-.article-area h2,
-.article-area h3 {
-  color: #636363;
-  display: inline-block;
+/* OVERVIEW //////////////////////////////////////////////////////////////// */
+.overview-area {
+  background: grey-background;
 }
 
-.article-area button {
-  margin-top: 14px;
-  float: right;
-  display: inline-block;
-  vertical-align: middle;
+.overview-nav {
+  display: none;
+  background: bg-purple;
+  color: #fff;
+  border-top: 1px solid text-light-grey;
+  border-bottom: 1px solid text-light-grey;
 }
 
-/* INVITES ================================================================= */
-.invites article {
-  /*border: 1px solid green;*/
+.overview-nav-area {
+  display: none;
+  text-align: center;
+  height: 40px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.invites h2,
-.invites h3 {
-  color: dark-grey;
+.overview-nav-area ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  /* FLEX IT */
+  /*overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;*/
+}
+
+.overview-nav-area ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.overview-nav-area li {
+  float: left;
+  margin: 0;
+  padding: 14px;
+  padding: 10px 14px 18px 14px;
+  width: 33%;
+  border-right: 1px solid text-light-grey;
+}
+
+.overview-nav-area img {
+  position: relative;
+  top: 10px;
+  right: 32px;
+}
+
+.selected-area {
+  width: 100%;
+}
+
+/*.overview-nav-area li:last-child {
+  border-right: none;
+}*/
+
+
+/* INVITES ///////////////////////////////////////////////////////////////// */
+.invites {
+  float: left;
+  width: 50%;
+  padding-top: 20px;
+}
+
+.invites h2 {
+  font-size: font-large;
+  color: text-dark-grey;
   display: inline-block;
 }
 
@@ -429,36 +403,78 @@ input.input-last {
   margin-right: 12px;
 }
 
-.invites .invite-box {
-  /*display: inline-block;*/
-  text-align: center
-  /*border: 1px solid red;*/
+.INVITE-BOX {
+  display: inline-block;
+  color: dark-grey;
 }
 
-.flex-container {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  /*-webkit-justify-content: center;
-  justify-content: center;*/
-  /*width: 400px;
-  height: 250px;*/
-  background-color: lightgrey;
+ul.inviteList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.flex-item {
-  background-color: cornflowerblue;
-  margin: 5px 5px;
-  /*width: 25%;*/
-  /*width: 100px;
+ul.inviteList:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.inviteList li {
+  float: left;
+  margin: 0;
+  margin-bottom: 20px;
+  width: 25%;
+}
+
+.INVITE-HEADSHOT {
+  width: 100px;
   height: 100px;
-  margin: 10px;*/
+  box-shadow: 4px 4px 2px -2px shadow-light-grey;
 }
 
+.INVITE-HEADSHOT img {
+  width: 100px;
+  height: 100px;
+}
 
+.INVITE-CAPTION {
+  font-size: 13px;
+  margin-top: 5px;
+}
 
-/* ACTIVITIES ============================================================== */
+.INVITE-CAPTION span {
+  display: block;
+}
+.INVITE-CAPTION span:last-child {
+  color: text-light-grey;
+}
+
+/* ACTIVITIES ////////////////////////////////////////////////////////////// */
+.activities {
+  float: right;
+  width: 35%;
+  padding-top: 20px;
+}
+
+.activities h2 {
+  font-size: font-large;
+  display: inline-block;
+}
+
+.activity-area h2,
+.activity-area h3 {
+  color: text-dark-grey;
+  display: inline-block;
+}
+
+.activity-area button {
+  margin-top: 14px;
+  float: right;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .activity-detail {
   background: #fff;
   padding: 10px 20px;
@@ -490,5 +506,94 @@ input.input-last {
 }
 
 use.svg-icon {
-  border:1px solid red;
+  border: 1px solid red;
 }
+
+
+/* MEDIA STYLES //////////////////////////////////////////////////////////// */
+@media only screen and (min-width: 320px) {
+  /* MOBILE AND TABLETS */
+  .container {
+    font-size: font-small;
+    width: 100%;
+    padding-left: (margin-body / 2);
+    padding-right: (margin-body / 2);
+  }
+
+  .nav li a {
+    text-align: left;
+  }
+
+  .nav-logo img {
+    width: 75%;
+  }
+
+  .event-area {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .event-area h2 {
+    font-size: font-large;
+    width: 60%;
+  }
+
+  .modal-wrapper {
+    float: right;
+  }
+
+  .modal-content {
+    width: 85%;
+    padding: 10px 20px;
+  }
+
+  .invites,
+  .activities {
+    display: none;
+    width: 100%;
+  }
+
+  .overview-nav {
+    display: block;
+  }
+
+  .overview-nav-area {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .show-tab {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* DESKTOP */
+  .container {
+    font-size: font-body;
+    padding-left: margin-body;
+    padding-right: margin-body;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+  }
+
+  .invites,
+  .activities {
+    display: block;
+    width: 50%;
+  }
+
+  .overview-nav {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
