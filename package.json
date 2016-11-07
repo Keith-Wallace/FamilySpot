@@ -4,11 +4,7 @@
   "description": "React-flux boilerplate",
   "main": "app.js",
   "scripts": {
-<<<<<<< HEAD
-    "start": "webpack-dev-server --content-base ./ --inline --hot --no-info --port 3001",
-=======
     "start": "node ./server.js",
->>>>>>> dev
     "test": "./node_modules/.bin/karma start  --single-run --browsers Chrome",
     "test-watch": "./node_modules/.bin/karma start --browsers Chrome",
     "dev": "webpack-dev-server --content-base ./ --inline --hot --no-info --port 3001"
