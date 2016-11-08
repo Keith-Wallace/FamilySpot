@@ -1,4 +1,5 @@
 import React from 'react';
+import IconGear from './Icon.gear';
 
 export default class Activity extends React.Component {
   constructor(props){
@@ -17,7 +18,7 @@ export default class Activity extends React.Component {
       <article>
         <div className="activity-detail">
           <div className="activity-settings">
-            <img src="../../../assets/gear-icon.svg" width="18px" />
+            <IconGear /> <img src="../../../assets/icon-triangle-down-light-grey.svg" />
           </div>
           <h3>{this.state.name}</h3>
           <div className="activity-date">{this.state.event.date} at {this.state.event.time}</div>

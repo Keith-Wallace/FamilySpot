@@ -64,6 +64,10 @@ h3 {
   font-weight: 700;
 }
 
+svg {
+  fill: shadow-light-grey;
+}
+
 .container {
   padding-left: 50px;
   padding-right: 50px
@@ -121,6 +125,7 @@ header .nav {
   width: 100%;
 }
 
+
 .nav ul {
   list-style-type: none;
   margin: 0;
@@ -144,6 +149,13 @@ header .nav {
   color: text-dark-grey;
   text-align: center;
   text-decoration: none;
+}
+
+.nav-account a {
+  background-image: url(/assets/icon-triangle-down-grey.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 48%;
+  padding-right: 16px;
 }
 
 .nav li img,
@@ -338,7 +350,7 @@ input.input-last {
 .overview-nav-area {
   /*display: none;*/
   text-align: center;
-  height: 40px;
+  height: 42px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -492,6 +504,10 @@ ul.inviteList:after {
   cursor: pointer;
 }
 
+.activity-settings img {
+  vertical-align: super;
+}
+
 .activity-detail h3 {
   margin: 10px 0;
   color: #1B4E64;
@@ -515,6 +531,10 @@ use.svg-icon {
 @media only screen and (max-width: 320px) {
   button {
     font-size: (font-small - 6);
+  }
+
+  .nav-account a {
+    padding-right: 14px;
   }
 
   .invites h2, .invites h3,
@@ -613,145 +633,13 @@ use.svg-icon {
 
   .invites button,
   .activities button {
-    margin: 0;
-    margin-top: 10px;
+    margin-right: 0;
+    margin-top: 6px;
   }
 
   .INVITE-HEADSHOT {
-    width: 85px;
-    height: 85px;
+    width: 75px;
+    height: 75px;
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (min-width: 320px) {
-  /* MOBILE AND TABLETS */
-/*  .container {
-    font-size: font-small;
-    width: 100%;
-    padding-left: (margin-body / 2);
-    padding-right: (margin-body / 2);
-  }
-
-  .nav li a {
-    text-align: left;
-  }
-
-  .nav-logo img {
-    width: 75%;
-  }
-
-  .event-area {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .event-area h2 {
-    font-size: font-large;
-    width: 60%;
-  }
-
-  .modal-wrapper {
-    float: right;
-  }
-
-  .modal-content {
-    width: 85%;
-    padding: 10px 20px;
-  }
-
-  .invites,
-  .activities {
-    display: none;
-    width: 100%;
-  }
-
-  .invites h2,
-  .activities h2 {
-    font-size: (font-large - 4);
-  }
-
-  .invites button,
-  .activities button {
-    margin: 0;
-    margin-top: 10px;
-  }
-
-  .INVITE-HEADSHOT {
-    width: 85px;
-    height: 85px;
-  }*/
-
-  /*.INVITE-HEADSHOT img {
-    width: 80%;
-    height: 80%;
-  }*/
-
- /* button {
-    font-size: font-small;
-  }
-
-  .overview-nav {
-    display: block;
-  }
-
-  .overview-nav-area {
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .show-tab {
-    display: block;
-    width: 100%;
-  }
-
-  .icon-tri-down {
-    background-image: url(/assets/icon-triangle-down-white.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 75%;
-  }*/
-}
-
-@media only screen and (min-width: 1024px) {
-  /* DESKTOP */
-  /*.container {
-    font-size: font-body;
-    padding-left: margin-body;
-    padding-right: margin-body;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1024px;
-  }
-
-  .invites,
-  .activities {
-    display: block;
-    width: 50%;
-  }
-
-  .overview-nav {
-    display: none;
-  }*/
-}
-
-
-
-
-
-
-
