@@ -33,118 +33,6 @@ font-small = (font-body - 4)        /*12px*/
 
 global-reset()
 
-/* MEDIA STYLES //////////////////////////////////////////////////////////// */
-@media only screen and (min-width: 320px) {
-  /* MOBILE AND TABLETS */
-  .container {
-    font-size: font-small;
-    width: 100%;
-    padding-left: (margin-body / 2);
-    padding-right: (margin-body / 2);
-  }
-
-  .nav li a {
-    text-align: left;
-  }
-
-  .nav-logo img {
-    width: 75%;
-  }
-
-  .event-area {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .event-area h2 {
-    font-size: font-large;
-    width: 60%;
-  }
-
-  .modal-wrapper {
-    float: right;
-  }
-
-  .modal-content {
-    width: 85%;
-    padding: 10px 20px;
-  }
-
-  .invites,
-  .activities {
-    display: none;
-    width: 100%;
-  }
-
-  .invites h2,
-  .activities h2 {
-    font-size: (font-large - 4);
-  }
-
-  .invites button,
-  .activities button {
-    margin: 0;
-    margin-top: 10px;
-  }
-
-  .INVITE-HEADSHOT {
-    width: 85px;
-    height: 85px;
-  }
-
-  /*.INVITE-HEADSHOT img {
-    width: 80%;
-    height: 80%;
-  }*/
-
-  button {
-    font-size: font-small;
-  }
-
-  .overview-nav {
-    display: block;
-  }
-
-  .overview-nav-area {
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .show-tab {
-    display: block;
-    width: 100%;
-  }
-
-  .icon-tri-down {
-    background-image: url(/assets/icon-triangle-down-white.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 75%;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  /* DESKTOP */
-  .container {
-    font-size: font-body;
-    padding-left: margin-body;
-    padding-right: margin-body;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1024px;
-  }
-
-  .invites,
-  .activities {
-    display: block;
-    width: 50%;
-  }
-
-  .overview-nav {
-    display: none;
-  }
-}
-
 *,
 *:before,
 *:after {
@@ -176,13 +64,13 @@ h3 {
   font-weight: 700;
 }
 
-/*.container {
+.container {
   padding-left: 50px;
   padding-right: 50px
   margin-left: auto;
   margin-right: auto;
   width: 1024px;
-}*/
+}
 
 .container:after,
 .form-col-2:after {
@@ -215,7 +103,6 @@ button.btn-cancel {
 
 /* TOP NAV ///////////////////////////////////////////////////////////////// */
 header {
-  width: 100%;
   background: bg-white;
   position: fixed;
   clear: both;
@@ -449,7 +336,7 @@ input.input-last {
 }
 
 .overview-nav-area {
-  display: none;
+  /*display: none;*/
   text-align: center;
   height: 40px;
   padding-left: 0;
@@ -622,6 +509,244 @@ ul.inviteList:after {
 
 use.svg-icon {
   border: 1px solid red;
+}
+
+/* MEDIA STYLES //////////////////////////////////////////////////////////// */
+@media only screen and (max-width: 320px) {
+  button {
+    font-size: (font-small - 6);
+  }
+
+  .invites h2, .invites h3,
+  .activities h2, .activities h3 {
+    font-size: (font-large - 8);
+  }
+
+  .inviteList li {
+    width: 33%;
+  }
+  
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: font-small;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: (margin-body / 2);
+    padding-right: (margin-body / 2);
+  }
+
+  button {
+    font-size: (font-small - 2);
+    font-size: 2.5vw;
+  }
+
+  /* TOP NAV /////////////////////// */
+  .nav li a {
+    text-align: left;
+  }
+
+  .nav .nav-logo img {
+    width: 75%;
+  }
+
+  .nav .nav-account img {
+    width: 50%;
+  }
+
+  /* EVENT AREA //////////////////// */
+  .event-area {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .event-area h2 {
+    font-size: font-large;
+    width: 65%;
+  }
+
+  .modal-wrapper {
+    float: right;
+  }
+
+  /* OVERVIEW AREA ///////////////// */
+  .overview-nav {
+    display: block;
+  }
+
+  .overview-nav-area {
+    /*display: block;*/
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .icon-tri-down {
+    background-image: url(/assets/icon-triangle-down-white.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 75%;
+    font-weight: 700;
+  }
+
+  .overview-area ul,
+  .activity-detail {
+    margin-top: 10px;
+  }
+
+  .invites,
+  .activities {
+    display: none;
+    width: 100%;
+  }
+  
+  .show-tab {
+    display: block;
+  }
+
+  .invites h2, .invites h3,
+  .activities h2, .activities h3 {
+    font-size: (font-large - 8);
+    font-size: 4vw;
+  }
+
+  .invites button,
+  .activities button {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .INVITE-HEADSHOT {
+    width: 85px;
+    height: 85px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 320px) {
+  /* MOBILE AND TABLETS */
+/*  .container {
+    font-size: font-small;
+    width: 100%;
+    padding-left: (margin-body / 2);
+    padding-right: (margin-body / 2);
+  }
+
+  .nav li a {
+    text-align: left;
+  }
+
+  .nav-logo img {
+    width: 75%;
+  }
+
+  .event-area {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .event-area h2 {
+    font-size: font-large;
+    width: 60%;
+  }
+
+  .modal-wrapper {
+    float: right;
+  }
+
+  .modal-content {
+    width: 85%;
+    padding: 10px 20px;
+  }
+
+  .invites,
+  .activities {
+    display: none;
+    width: 100%;
+  }
+
+  .invites h2,
+  .activities h2 {
+    font-size: (font-large - 4);
+  }
+
+  .invites button,
+  .activities button {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .INVITE-HEADSHOT {
+    width: 85px;
+    height: 85px;
+  }*/
+
+  /*.INVITE-HEADSHOT img {
+    width: 80%;
+    height: 80%;
+  }*/
+
+ /* button {
+    font-size: font-small;
+  }
+
+  .overview-nav {
+    display: block;
+  }
+
+  .overview-nav-area {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .show-tab {
+    display: block;
+    width: 100%;
+  }
+
+  .icon-tri-down {
+    background-image: url(/assets/icon-triangle-down-white.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 75%;
+  }*/
+}
+
+@media only screen and (min-width: 1024px) {
+  /* DESKTOP */
+  /*.container {
+    font-size: font-body;
+    padding-left: margin-body;
+    padding-right: margin-body;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+  }
+
+  .invites,
+  .activities {
+    display: block;
+    width: 50%;
+  }
+
+  .overview-nav {
+    display: none;
+  }*/
 }
 
 
