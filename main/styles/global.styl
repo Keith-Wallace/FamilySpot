@@ -31,9 +31,119 @@ font-large = (font-body * 1.5)      /*24px*/
 
 font-small = (font-body - 4)        /*12px*/
 
-
-
 global-reset()
+
+/* MEDIA STYLES //////////////////////////////////////////////////////////// */
+@media only screen and (min-width: 320px) {
+  /* MOBILE AND TABLETS */
+  .container {
+    font-size: font-small;
+    width: 100%;
+    padding-left: (margin-body / 2);
+    padding-right: (margin-body / 2);
+  }
+
+  .nav li a {
+    text-align: left;
+  }
+
+  .nav-logo img {
+    width: 75%;
+  }
+
+  .event-area {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .event-area h2 {
+    font-size: font-large;
+    width: 60%;
+  }
+
+  .modal-wrapper {
+    float: right;
+  }
+
+  .modal-content {
+    width: 85%;
+    padding: 10px 20px;
+  }
+
+  .invites,
+  .activities {
+    display: none;
+    width: 100%;
+  }
+
+  .invites h2,
+  .activities h2 {
+    font-size: (font-large - 4);
+  }
+
+  .invites button,
+  .activities button {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .INVITE-HEADSHOT {
+    width: 85px;
+    height: 85px;
+  }
+
+  /*.INVITE-HEADSHOT img {
+    width: 80%;
+    height: 80%;
+  }*/
+
+  button {
+    font-size: font-small;
+  }
+
+  .overview-nav {
+    display: block;
+  }
+
+  .overview-nav-area {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .show-tab {
+    display: block;
+    width: 100%;
+  }
+
+  .icon-tri-down {
+    background-image: url(/assets/icon-triangle-down-white.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 75%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* DESKTOP */
+  .container {
+    font-size: font-body;
+    padding-left: margin-body;
+    padding-right: margin-body;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+  }
+
+  .invites,
+  .activities {
+    display: block;
+    width: 50%;
+  }
+
+  .overview-nav {
+    display: none;
+  }
+}
 
 *,
 *:before,
@@ -118,6 +228,10 @@ header {
 header .nav {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.nav-logo img {
+  width: 100%;
 }
 
 .nav ul {
@@ -508,119 +622,6 @@ ul.inviteList:after {
 
 use.svg-icon {
   border: 1px solid red;
-}
-
-
-/* MEDIA STYLES //////////////////////////////////////////////////////////// */
-@media only screen and (min-width: 320px) {
-  /* MOBILE AND TABLETS */
-  .container {
-    font-size: font-small;
-    width: 100%;
-    padding-left: (margin-body / 2);
-    padding-right: (margin-body / 2);
-  }
-
-  .nav li a {
-    text-align: left;
-  }
-
-  .nav-logo img {
-    width: 75%;
-  }
-
-  .event-area {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .event-area h2 {
-    font-size: font-large;
-    width: 60%;
-  }
-
-  .modal-wrapper {
-    float: right;
-  }
-
-  .modal-content {
-    width: 85%;
-    padding: 10px 20px;
-  }
-
-  .invites,
-  .activities {
-    display: none;
-    width: 100%;
-  }
-
-  .invites h2,
-  .activities h2 {
-    font-size: (font-large - 4);
-  }
-
-  .invites button,
-  .activities button {
-    margin: 0;
-    margin-top: 10px;
-  }
-
-  .INVITE-HEADSHOT {
-    width: 85px;
-    height: 85px;
-  }
-
-  /*.INVITE-HEADSHOT img {
-    width: 80%;
-    height: 80%;
-  }*/
-
-  button {
-    font-size: font-small;
-  }
-
-  .overview-nav {
-    display: block;
-  }
-
-  .overview-nav-area {
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .show-tab {
-    display: block;
-    width: 100%;
-  }
-
-  .icon-tri-down {
-    background-image: url(/assets/icon-triangle-down-white.svg);
-    background-repeat: no-repeat;
-    background-position: 50% 75%;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  /* DESKTOP */
-  .container {
-    font-size: font-body;
-    padding-left: margin-body;
-    padding-right: margin-body;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1024px;
-  }
-
-  .invites,
-  .activities {
-    display: block;
-    width: 50%;
-  }
-
-  .overview-nav {
-    display: none;
-  }
 }
 
 

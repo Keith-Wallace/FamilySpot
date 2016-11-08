@@ -3,7 +3,7 @@ import React from 'react'
 export default class Home extends React.Component {
   constructor(props){
     super(props)
-    this.state = {name: 'Guest'}
+    this.state = {name: 'Keith'}
     this.changeName = this.changeName.bind(this)
   }
   changeName() { this.setState({name: this.refs.userName.value}) }
