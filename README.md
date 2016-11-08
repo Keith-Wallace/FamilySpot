@@ -19,3 +19,18 @@ This frontend web application is a fictitious Family Reunion App. It's purpose i
 ## Takeaways from this Project
 - Would love to explore more using Stylus - incorporate more dynamic values for colors, margin, padding, and font sizes, and conditional statemens for breakpoints.
 - A little clunky with using SVGs for icons and small images.
+
+## Running this Application
+Fork or clone this repo and run from command line...
+
+```
+$ ~/FamilySpot: npm install
+```
+...run localhost server using webpack...
+
+```
+$ ~/FamilySpot: npm run dev
+```
+...and view in broswers on [http://localhost:3001/](http://localhost:3001)
+
+View Running Application from [Heroku](https://family-spot.herokuapp.com/)
