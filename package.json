@@ -9,8 +9,7 @@
   },
   "scripts": {
     "postinstall": "webpack --config ./webpack.config.js --progress --colors",
-    "start": "node server.js",
-    "start2": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "node ./server.js",
     "test": "./node_modules/.bin/karma start  --single-run --browsers Chrome",
     "test-watch": "./node_modules/.bin/karma start --browsers Chrome",
     "dev": "webpack-dev-server --content-base ./ --inline --hot --no-info --port 3001"
