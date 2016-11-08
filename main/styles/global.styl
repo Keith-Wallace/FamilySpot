@@ -321,7 +321,7 @@ header .nav {
 }
 
 input.input-half {
-  width: 42%;
+  width: 40%;
   margin-right: 10px;
 }
 
@@ -545,7 +545,6 @@ use.svg-icon {
   .inviteList li {
     width: 33%;
   }
-  
 }
 
 @media only screen and (max-width: 480px) {
@@ -590,6 +589,16 @@ use.svg-icon {
 
   .modal-wrapper {
     float: right;
+  }
+
+  /* MODAL ///////////////////////// */
+  .modal-content {
+    width: 88%;
+    padding: 10px;
+  }
+
+  .modal-content input {
+    font-size: font-small;
   }
 
   /* OVERVIEW AREA ///////////////// */
@@ -641,5 +650,12 @@ use.svg-icon {
     width: 75px;
     height: 75px;
   }
-
 }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  /* MODAL ///////////////////////// */
+  .modal-content {
+    width: 75%;
+  }
+}
+
