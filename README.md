@@ -12,4 +12,10 @@ This frontend web application is a fictitious Family Reunion App. It's purpose i
 - Useing frontend integration tests (mocha, jasmine, etc.). Also provided in Everplan's React Boilerplate
 
 ## Tech and Libraries
-- [W3Schools](http://www.w3schools.com/howto/howto_css_modals.asp) How To: CSS/JS Modal
+- Front-End: [React.js](https://facebook.github.io/react/) JavaScript library
+- [Webpack](https://webpack.github.io/) for model bundler and Node.js server, [Stylus](http://stylus-lang.com/) for dynamic CSS (Part of Everplan's React Boilerplate).  
+- Form Modal: [W3Schools](http://www.w3schools.com/howto/howto_css_modals.asp) How To: CSS/JS Modal
+
+## Takeaways from this Project
+- Would love to explore more using Stylus - incorporate more dynamic values for colors, margin, padding, and font sizes, and conditional statemens for breakpoints.
+- A little clunky with using SVGs for icons and small images.
