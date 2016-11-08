@@ -20,6 +20,11 @@ This frontend web application is a fictitious Family Reunion App. It's purpose i
 - Would love to explore more using Stylus - incorporate more dynamic values for colors, margin, padding, and font sizes, and conditional statemens for breakpoints.
 - A little clunky with using SVGs for icons and small images.
 
+## Future Features?
+- Allow user login
+- Connect all form and application data to database, rather then preset-state storage
+- Allow to add/modify/delete Invites and Activities
+
 ## Running this Application
 Fork or clone this repo and run from command line...
 
